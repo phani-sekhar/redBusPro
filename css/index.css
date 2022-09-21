@@ -32,6 +32,7 @@ a {
 .nav-item > a:hover {
   color: rgb(241, 228, 228) !important;
 }
+
 /* Menu bar Styling */
 .navbar-light .navbar-toggler-icon {
   background-image: url(https://i.postimg.cc/3wnC7vjX/transparent-hd-white-menu-burger-icon-31634946136ufll2pj5eo-removebg-preview.png);
