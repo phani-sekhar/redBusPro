@@ -40,6 +40,30 @@ a {
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
 }
+#coupon {
+  height: 500px;
+  width: 886px;
+  background-color: grey;
+  z-index: 100;
+  margin: auto;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(https://i.postimg.cc/zGwLgLgP/red-Bus-coupon.jpg);
+  background-size: cover;
+}
+button {
+  background-color: transparent;
+  padding: 1% 2%;
+  border: none;
+  font-size: 24px;
+  /* font-weight: 500; */
+  float: right;
+  cursor: pointer;
+  color: #d84f57;
+}
 /* Nav Bar Styling Ends Here */
 
 .welcomeDiv {
