@@ -1,8 +1,11 @@
+
 function loadCoupon() {
   document.getElementById("coupon").style.visibility = "visible";
-  document.getElementById("total").style.opacity = 0.6;
+  document.getElementById("main").style.opacity = 0.7;
+  // document.body.style.overflowY = "hidden";
 }
 function closeCoupon() {
   document.getElementById("coupon").style.visibility = "hidden";
-  document.getElementById("total").style.opacity = 1;
+  document.getElementById("main").style.opacity = 1;
+  // document.body.style.overflowY = "scroll";
 }
