@@ -1,11 +1,13 @@
-
 function loadCoupon() {
-  document.getElementById("coupon").style.visibility = "visible";
-  document.getElementById("main").style.opacity = 0.7;
-  // document.body.style.overflowY = "hidden";
+  if (window.matchMedia("(max-width: 896px)").matches) {
+    document.getElementById("coupon-container").style.visibility = "hidden";
+    document.body.style.overflow = "scroll";
+  } else {
+    document.getElementById("coupon-container").style.visibility = "visible";
+    document.body.style.overflow = "hidden";
+  }
 }
 function closeCoupon() {
-  document.getElementById("coupon").style.visibility = "hidden";
-  document.getElementById("main").style.opacity = 1;
-  // document.body.style.overflowY = "scroll";
+  document.getElementById("coupon-container").style.visibility = "hidden";
+  document.body.style.overflow = "scroll";
 }

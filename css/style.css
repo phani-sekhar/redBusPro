@@ -19,22 +19,26 @@ a {
   display: none;
 }
 /* Offer popup  */
-#main {
-  position: relative;
-}
-#coupon {
-  height: 500px;
-  width: 886px;
-  background-color: grey;
-  z-index: 100;
-  margin: auto;
-  visibility: hidden;
-  position: absolute;
+#coupon-container {
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(https://i.postimg.cc/zGwLgLgP/red-Bus-coupon.jpg);
-  background-size: cover;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+#coupon {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  transform: translate(-10%, -10%);
+  width: 750px;
+  height: 420px;
+  background-image: url(https://i.postimg.cc/NFTQV6PY/redbus-popup-2.jpg);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0) 0.1;
 }
 button {
   background-color: transparent;
@@ -220,6 +224,12 @@ button {
   font-size: 19px;
 }
 /* We promise to deliver */
+.promise h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1%;
+  font-weight: 600;
+}
 .promise {
   background-color: #ededed;
   padding-top: 1%;
@@ -229,12 +239,7 @@ button {
   height: 80px;
   margin-bottom: 1%;
 }
-.promise h3 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1%;
-  font-weight: 600;
-}
+
 .deliverDiv {
   padding: 2%;
   background-color: #fff;
@@ -297,6 +302,11 @@ button {
 }
 
 /* Numbers  */
+.number-heading {
+  margin-bottom: 3%;
+  color: #333;
+  font-weight: 500;
+}
 .numbers {
   text-align: center;
   margin-left: auto;
@@ -398,13 +408,6 @@ button {
 }
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  #coupon {
-    display: none;
-    opacity: 1;
-  }
-  #main {
-    opacity: 1;
-  }
   .welcomeDiv {
     background-image: none;
     height: 350px;
