@@ -1,0 +1,21 @@
+.dark-body {
+  background-color: black;
+}
+
+.dark-body .dark-text {
+  color: white;
+}
+.dark-body .mode::before {
+  content: "\f185";
+  font-family: fontAwesome;
+  color: white;
+}
+.dark-body .welcomeDiv {
+  background-image: url(https://i.postimg.cc/g27fr0Xj/Hero01.png);
+}
+@media screen and (max-width: 768px) {
+  .dark-body .welcomeDiv {
+    background-image: none;
+    height: 350px;
+  }
+}

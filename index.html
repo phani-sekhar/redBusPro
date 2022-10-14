@@ -33,6 +33,7 @@
 
   <!-- Custom  CSS  -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dark.css">
 
   <!-- Custom JavaScript file -->
   <script src="script/script.js"></script>
@@ -47,179 +48,184 @@
     </div>
   </div>
 
-  <div id="main">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
-      <div class="container-fluid">
-        <a class=" logo" href="#"><img width="65px" src="https://i.postimg.cc/6QXFSC9R/red-Bus-Logo.png"
-            alt="Brand Logo" /></a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+    <div class="container-fluid">
+      <a class=" logo" href="#"><img width="65px" src="https://i.postimg.cc/6QXFSC9R/red-Bus-Logo.png"
+          alt="Brand Logo" /></a>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active navbar-text busTkt" aria-current="page" href="#">BUS TICKETS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text" href="#">rYde <sup><strong>New</strong></sup></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text" href="rail.html">redRail <sup><strong>New</strong></sup></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text mode" onclick="changeMode()"></a>
+          </li>
+        </ul>
+        <div class="navRight ms-auto">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active navbar-text busTkt" aria-current="page" href="#">BUS TICKETS</a>
+              <a class="nav-link navbar-text" href="#">Help</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navbar-text" href="#">rYde <sup><strong>New</strong></sup></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle navbar-text" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Manage Booking
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Cancel</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Change Travel Date</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Show My Ticket</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">E-mail/SMS</a>
+                </li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link navbar-text" href="rail.html">redRail <sup><strong>New</strong></sup></a>
-            </li>
-          </ul>
-          <div class="navRight ms-auto">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link navbar-text" href="#">Help</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle navbar-text" href="#" id="navbarDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Manage Booking
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Cancel</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Change Travel Date</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Show My Ticket</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">E-mail/SMS</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle navbar-text" href="#" id="navbarDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user"></i>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">LogIn/SignUp</a></li>
-                </ul>
-          </div>
-          </li>
-          </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle navbar-text" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">LogIn/SignUp</a></li>
+              </ul>
         </div>
-      </div>
-    </nav>
-
-    <!-- Welcome Divison -->
-    <div class="welcomeDiv mt-5">
-      <div class="container mt-5 ">
-
-        <div class="row g-0 ">
-          <div class=" col-lg-3 col-md-3 col-sm-8 mb-2">
-            <input type="text" class="form-control" id="from" placeholder="Source">
-            <label for="from"></label>
-          </div>
-
-          <div class="  col-lg-3 col-md-3 col-sm-8 mb-2">
-            <input type="text" class="form-control " id="to" placeholder="Destination">
-            <label for="to"></label>
-          </div>
-
-          <div class="  col-lg-3 col-md-3 col-sm-8 mb-2">
-            <input type="date" class="form-control" id="date" placeholder="Date">
-            <label for="date"></label>
-          </div>
-
-          <div class=" col-lg-3 col-md-3 col-sm-8 mb-2">
-            <button type="submit" class="btn searchBtn">SEARCH BUSES</button>
-          </div>
-
-        </div>
+        </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="container ">
-      <div class="promtion-wrap">
-        <div class="img">
-          <img src="https://i.postimg.cc/nh7603tp/first.png" alt="Offer">
+  <!-- Welcome Divison -->
+  <div class="welcomeDiv mt-5">
+    <div class="container mt-5 ">
+
+      <div class="row g-0 ">
+        <div class=" col-lg-3 col-md-3 col-sm-8 mb-2">
+          <input type="text" class="form-control" id="from" placeholder="Source">
+          <label for="from"></label>
         </div>
-        <div class="text">
-          <h6>SAVE UPTO &#8377;300 ON YOUR BUS TICKETS</h6>
-          <p>Book your favourite seat now.</p>
+
+        <div class="  col-lg-3 col-md-3 col-sm-8 mb-2">
+          <input type="text" class="form-control " id="to" placeholder="Destination">
+          <label for="to"></label>
         </div>
+
+        <div class="  col-lg-3 col-md-3 col-sm-8 mb-2">
+          <input type="date" class="form-control" id="date" placeholder="Date">
+          <label for="date"></label>
+        </div>
+
+        <div class=" col-lg-3 col-md-3 col-sm-8 mb-2">
+          <button type="submit" class="btn searchBtn">SEARCH BUSES</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Offers section -->
-    <div class="offerDiv mt-2 mb-4">
-      <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-md-4 offer ">
-            <p class="text-center">Save up to &#8377;300 on Bus Tickets</p>
-            <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/nh7603tp/first.png" alt="">
-            <p class="text-center">Use code <strong>FIRST</strong></p>
-          </div>
-          <div class="col-md-4 offer ">
-            <p class="text-center">Save up to &#8377;300 on Bus Tickets</p>
-            <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/9Qx5FmF1/superHit.png" alt="">
-            <p class="text-center">Use code <strong>SUPER HIT</strong></p>
-          </div>
-          <div class="col-md-4 offer ">
-            <p class="text-center">Save up to &#8377;200 in Delhi, West India & North India
-            </p>
-            <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/9FYHKP66/offer.png" alt="">
-            <p class="text-center">Use code <strong>RB200</strong></p>
-          </div>
-        </div>
+  <!-- Promotion wrap -->
+
+  <div class="container ">
+    <div id="promotion" class="promotion-wrap">
+      <div class="img">
+        <img src="https://i.postimg.cc/nh7603tp/first.png" alt="Offer">
+      </div>
+      <div class="text">
+        <h6>SAVE UPTO &#8377;300 ON YOUR BUS TICKETS</h6>
+        <p>Book your favourite seat now.</p>
       </div>
     </div>
+  </div>
 
-    <!-- App Ad Section -->
-    <div class="container-fluid appAd">
-      <div class="container  ">
-        <div class="row g-0">
-          <div class="col-md-5  appText">
-            <h3>CONVENIENCE ON-THE-GO</h3>
-            <p>Last Minute Booking - In a hurry to book a bus at the last minute?
-              <br>
-              Choose the bus passing from your
-              nearest boarding
-              point and book in a few easy steps. Boarding Point Navigation - Never lose your way while travelling to
-              your boarding
-              point! <br>
-              Comprehensive Ticket Details- Everything you need to make the travel hassle-free - rest stop
-              details, boarding
-              point images, chat with co-passengers, wake-up alarm and much more! <br>
-            </p>
-
-            <form class="row g-3 appLink">
-              <div class="col-auto">
-                <label for="phoneNum" class="visually-hidden">Password</label>
-                <input type="text" class="form-control" id="phoneNum" placeholder="Enter your Mobile Number">
-              </div>
-              <div class="col-auto">
-
-                <button type="submit" class="btn phoneBtn mb-3">SEND ME THE LINK</button>
-
-              </div>
-              <div class="col-auto"><a class="icons" href="#">
-                  <i class="ph-apple-logo-fill applogo"></i>
-                </a>
-                <a class="icons" href="#">
-                  <i class="ph-google-play-logo-fill applogo"></i>
-                </a>
-              </div>
-            </form>
-          </div>
-          <div class="appImg col-md-5 ">
-            <img src="https://i.postimg.cc/sgdKwzNK/IOS-Android-device.png" alt="">
-          </div>
+  <!-- Offers section -->
+  <div class="offerDiv mt-2 mb-4">
+    <div id="offer" class="container">
+      <div class="row justify-content-around">
+        <div class="col-md-4 offer ">
+          <p class="text-center dark-text">Save up to &#8377;300 on Bus Tickets</p>
+          <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/nh7603tp/first.png" alt="">
+          <p class="text-center dark-text">Use code <strong>FIRST</strong></p>
+        </div>
+        <div class="col-md-4 offer ">
+          <p class="text-center dark-text">Save up to &#8377;300 on Bus Tickets</p>
+          <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/9Qx5FmF1/superHit.png" alt="">
+          <p class="text-center dark-text">Use code <strong>SUPER HIT</strong></p>
+        </div>
+        <div id="offer" class="col-md-4 offer ">
+          <p class="text-center dark-text">Save up to &#8377;200 in Delhi, West India & North India
+          </p>
+          <img class="mx-auto d-block" width="80%" src="https://i.postimg.cc/9FYHKP66/offer.png" alt="">
+          <p class="text-center dark-text">Use code <strong>RB200</strong></p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- App Ad Section -->
+  <div id="appAd" class="container-fluid appAd">
+    <div class="container  ">
+      <div class="row g-0">
+        <div class="col-md-5  appText">
+          <h3 class="dark-text">CONVENIENCE ON-THE-GO</h3>
+          <p class="dark-text">Last Minute Booking - In a hurry to book a bus at the last minute?
+            <br>
+            Choose the bus passing from your
+            nearest boarding
+            point and book in a few easy steps. Boarding Point Navigation - Never lose your way while travelling to
+            your boarding
+            point! <br>
+            Comprehensive Ticket Details- Everything you need to make the travel hassle-free - rest stop
+            details, boarding
+            point images, chat with co-passengers, wake-up alarm and much more! <br>
+          </p>
+
+          <form class="row g-3 appLink">
+            <div class="col-auto">
+              <label for="phoneNum" class="visually-hidden"></label>
+              <input type="text" class="form-control" id="phoneNum" placeholder="Enter your Mobile Number">
+            </div>
+            <div class="col-auto">
+
+              <button type="submit" class="btn phoneBtn mb-3">SEND ME THE LINK</button>
+
+            </div>
+            <div class="col-auto"><a class="icons" href="#">
+                <i class="ph-apple-logo-fill applogo"></i>
+              </a>
+              <a class="icons" href="#">
+                <i class="ph-google-play-logo-fill applogo"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="appImg col-md-5 ">
+          <img src="https://i.postimg.cc/sgdKwzNK/IOS-Android-device.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- We promise to deliver -->
-  <div class="container-fluid promise">
+  <div id="promise" class="container-fluid promise">
     <img class=" mx-auto d-block" src="https://i.postimg.cc/9QDHzv42/promise.png" alt="">
-    <h3>WE PROMISE TO DELIVER</h3>
+    <h3 class="dark-text">WE PROMISE TO DELIVER</h3>
     <div class="container">
       <div class="row">
         <div class="col-md-4 deliverDiv">
@@ -247,66 +253,65 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid awards">
-    <h3 class="
-        ">AWARDS & RECOGNITION</h3>
+  <div id="awards" class="container-fluid awards">
+    <h3 class="heading dark-text">AWARDS & RECOGNITION</h3>
     <div class="container">
       <div class="row ">
         <div class="col-md-4 "><img class="mx-auto d-block" src="https://i.postimg.cc/N0JddyVT/Business-Standard1.png"
             alt="">
-          <p class="award-text">Most Innovative Company</p>
+          <p class="award-text dark-text">Most Innovative Company</p>
         </div>
         <div class="col-md-4"><img class="mx-auto d-block" src="https://i.postimg.cc/2SxcB970/Brand-Trust-Report.png"
             alt="">
           <br>
-          <p class="award-text">Most Trusted Brand</p>
+          <p class="award-text dark-text">Most Trusted Brand</p>
         </div>
         <div class="col-md-4 "><img class="mx-auto d-block" src="https://i.postimg.cc/xdTsGGsn/Eye-for-Travel1.png"
             alt="">
-          <p class="award-text">Most Innovation Award</p>
+          <p class="award-text dark-text">Most Innovation Award</p>
         </div>
       </div>
     </div>
   </div>
   <!-- Global Presence -->
-  <div class="container-fluid flags">
-    <div class="container  ">
-      <h3 class="mb-3">OUR GLOBAL PRESENCE</h3>
+  <div id="flags" class="container-fluid flags">
+    <div class="container">
+      <h3 class="mb-3 dark-text">OUR GLOBAL PRESENCE</h3>
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs mb-4">
           <img class="flag-img" height="100px" src="https://i.postimg.cc/PJ1NqvXP/co.png" alt="">
-          <p class="flag-text">Columbia</p>
+          <p class="flag-text dark-text">Columbia</p>
         </div>
         <div class="col-md-4 col-sm-4 col-xs mb-4"> <img class="flag-img" height="100px"
             src="https://i.postimg.cc/xTycDmpZ/in.png" alt="">
-          <p class="flag-text">India</p>
+          <p class="flag-text dark-text">India</p>
         </div>
         <div class="col-md-4 col-sm-4 col-xs mb-4"> <img class="flag-img" height="100px"
             src="https://i.postimg.cc/Qd8VXMRd/id.png" alt="">
-          <p class="flag-text">Indonesia</p>
+          <p class="flag-text dark-text">Indonesia</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs mb-4"> <img class="flag-img" height="100px"
             src="https://i.postimg.cc/X70pzLLF/my.png" alt="">
-          <p class="flag-text">Malaysia</p>
+          <p class="flag-text dark-text">Malaysia</p>
         </div>
 
         <div class="col-md-4 col-sm-4 col-xs mb-4"> <img class="flag-img" height="100px"
             src="https://i.postimg.cc/h4mXs6Lc/pe.png" alt="">
-          <p class="flag-text">Peru</p>
+          <p class="flag-text dark-text">Peru</p>
         </div>
 
         <div class="col-md-4 col-sm-4 col-xs mb-4"> <img class="flag-img" height="100px"
             src="https://i.postimg.cc/3xtNWTTC/sg.png" alt="">
-          <p class="flag-text">Singapore</p>
+          <p class="flag-text dark-text">Singapore</p>
         </div>
       </div>
     </div>
   </div>
   <!-- Numbers  -->
-  <div class=" container-fluid ">
-    <h3 class="text-center number-heading">THE NUMBERS ARE GROWING!</h3>
+  <div id="number" class=" container-fluid ">
+    <h3 class="text-center number-heading dark-text">THE NUMBERS ARE GROWING!</h3>
     <div class="container">
       <div class="row">
         <div class="col-md-3  numbers">
@@ -329,13 +334,13 @@
   </div>
 
   <!-- Bus Routes -->
-  <div class="container-fluid mt-3 me-auto ms-auto routes">
+  <div id="buses" class="container-fluid mt-3 me-auto ms-auto routes">
     <div class="contianer">
       <div class="row">
         <div class="col-lg-3 col-md-3 busRoute">
           <ul>
             <li>
-              <h6>Top Bus Routes</h6>
+              <h6 class="dark-text">Top Bus Routes</h6>
             </li>
             <li> <a href="#">Hyderabad to Bangalore Bus</a> </li>
             <li> <a href="#">Bangalore to Chennai Bus</a> </li>
@@ -347,7 +352,7 @@
         <div class=" col-lg-2 col-md-2 topRoute">
           <ul>
             <li>
-              <h6>Top Cities</h6>
+              <h6 class="dark-text">Top Cities</h6>
             </li>
             <li> <a href="#">Hyderabad Bus Tickets</a> </li>
             <li> <a href="#">Bangalore Bus Tickets</a> </li>
@@ -360,7 +365,7 @@
 
           <ul>
             <li>
-              <h6>Top RTCs</h6>
+              <h6 class="dark-text">Top RTCs</h6>
             </li>
             <li><a href="#"> APSRTC</a></li>
             <li><a href="#"> GSRTC</a></li>
@@ -373,7 +378,7 @@
 
           <ul>
             <li>
-              <h6>Other</h6>
+              <h6 class="dark-text">Other</h6>
             </li>
             <li><a href="#"> TSRTC</a></li>
             <li><a href="#"> SBRTC</a></li>
@@ -386,7 +391,7 @@
 
           <ul>
             <li>
-              <h6>Tempo Traveler in Cities</h6>
+              <h6 class="dark-text">Tempo Traveler in Cities</h6>
             </li>
             <li><a href="#">Tempo Traveler in Bangalore</a> </li>
             <li><a href="#">Tempo Traveler in Chennai</a> </li>
@@ -398,7 +403,7 @@
       </div>
       <hr>
       <div class=" row  topOperators">
-        <h6 class="text-start">Top Operators</h6>
+        <h6 class="text-start dark-text">Top Operators</h6>
         <ul>
           <li><a href="#">SRS Travels</a></li>
           <li><a href="#">Kallada Travels</a></li>
@@ -460,7 +465,7 @@
       <div class="row">
         <div class="col-lg-2 col-md-5 col-sm-5 col-xs about">
           <ul>
-            <li style="color: #797979; font-weight: 600;">About redBus</li>
+            <li class="mb-2" style="color: #797979; font-weight: 600;">About redBus</li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Mobile Version</a></li>
@@ -473,7 +478,7 @@
         </div>
         <div class="col-lg-2 col-md-5 col-sm-5 col-xs info">
           <ul>
-            <li style="color: #797979; font-weight: 600;">Info</li>
+            <li class="mb-2" style="color: #797979; font-weight: 600;">Info</li>
             <li><a href="#">T&C</a></li>
 
             <li><a href="#">Privacy Policy</a></li>
@@ -493,7 +498,7 @@
         </div>
         <div class="col-lg-2 col-md-5 col-sm-5 col-xs sites">
           <ul>
-            <li style="color: #797979; font-weight: 600 ; ">Global Sites</li>
+            <li class="mb-2" style="color: #797979; font-weight: 600 ; ">Global Sites</li>
             <li><a href="#">India</a></li>
             <li><a href="#">Singapore</a></li>
             <li><a href="#">Malaysia</a></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="col-lg-2 col-md-5 col-sm-5 col-xs partners">
           <ul>
-            <li style="color: #797979; font-weight: 600 ; ">Our Partners</li>
+            <li class="mb-2" style="color: #797979; font-weight: 600 ; ">Our Partners</li>
             <li><a href=" #">Goibibo</a></li>
             <li><a href="#">Makemytrip</a></li>
           </ul>

@@ -84,7 +84,16 @@ button {
 .nav-item > a:hover {
   color: rgb(241, 228, 228) !important;
 }
+.mode {
+  cursor: pointer;
+}
+.mode::before {
+  content: "\f186";
+  font-family: fontAwesome;
+  color: #fff;
 
+  /* font-size: 16px; */
+}
 .dropdown-menu a {
   font-size: 12px;
   font-weight: 600;
@@ -122,7 +131,7 @@ button {
   color: white;
 }
 
-.promtion-wrap {
+.promotion-wrap {
   width: 50%;
   display: flex;
   align-items: center;
@@ -131,13 +140,13 @@ button {
   box-shadow: 0 3px 7px 0 rgb(0 0 0 / 28%);
   padding: 1% 0px;
 }
-.promtion-wrap img {
+.promotion-wrap img {
   height: 80px;
 }
-.promtion-wrap .text {
+.promotion-wrap .text {
   font-size: 12px;
 }
-.promtion-wrap p {
+.promotion-wrap p {
   color: #777;
 }
 
@@ -174,6 +183,7 @@ button {
   background-size: cover;
   height: auto;
   padding-bottom: 1%;
+  padding-top: 2%;
 }
 .appText {
   font-size: 16px;
@@ -313,12 +323,13 @@ button {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.numbers > p {
+.numbers p {
   color: gray;
 }
-.numbers > h3 {
+.numbers h3 {
   color: #da4e52;
   margin-top: -3%;
+  font-size: 40px;
 }
 /* Bus Routes */
 .routes {
@@ -412,7 +423,7 @@ button {
     background-image: none;
     height: 350px;
   }
-  .promtion-wrap {
+  .promotion-wrap {
     display: none;
   }
   .appAd {
@@ -422,3 +433,4 @@ button {
     margin-left: 0;
   }
 }
+/* Dark Mode styles */
