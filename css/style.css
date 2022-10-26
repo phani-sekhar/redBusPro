@@ -103,6 +103,8 @@ button {
   background-color: #e48489;
 }
 
+/* redRail style */
+
 /* Nav Bar Styling Ends Here */
 
 .welcomeDiv {
@@ -369,6 +371,7 @@ button {
 #moreOp:hover {
   color: #d84f57;
 }
+
 .footer {
   background-color: #1b2330;
   padding: 2%;
