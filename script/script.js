@@ -36,8 +36,8 @@ function changeMode() {
   let darkBus = document.getElementById("buses");
   darkBus.classList.toggle("dark-body");
 }
+
 //weather
-// let x = document.getElementById("out");
 let y = document.getElementById("weatherOut");
 function geolocation() {
   if (navigator.geolocation) {
@@ -51,7 +51,6 @@ function showPosition(data) {
   console.log(data);
   let lat = data.coords.latitude;
   let long = data.coords.longitude;
-  // x.innerText = `Latitude is ${lat} and longitude is ${long}`;
   const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
   //api calling
   fetch(url, { method: "GET" })
@@ -68,3 +67,4 @@ function showPosition(data) {
       console.log(err);
     });
 }
+geolocation();
