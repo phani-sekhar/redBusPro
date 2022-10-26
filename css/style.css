@@ -436,4 +436,8 @@ button {
     margin-left: 0;
   }
 }
-/* Dark Mode styles */
+@media screen and (max-width: 910px) {
+  #coupon-container {
+    display: none;
+  }
+}
